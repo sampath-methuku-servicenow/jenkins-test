@@ -5,7 +5,7 @@ stages {
                
          stage('Build-Step') {
              when {
-               branch 'master'                  
+               branch 'PR-1'                  
              }
              steps {
                      echo 'Build Step '
