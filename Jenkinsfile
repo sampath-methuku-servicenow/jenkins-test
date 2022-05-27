@@ -2,10 +2,10 @@ pipeline {
     agent any
 stages {
 
-           
+               
          stage('Build-Step') {
              when {
-               branch 'master'                  
+               branch 'pr_branch'                  
              }
              steps {
                      echo 'Build Step '
@@ -16,7 +16,7 @@ stages {
         stage('Change-Step') {
               steps {
                    echo 'Change Step'
-                   snDevOpsChange()
+                  snDevOpsChange()
               }
         }
 }
